@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+   
+    
+    height: 100vh;
+    margin: 0;
+    background-color: #080808;
+   
+}
+
+
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        padding: 5px;
+    }
+}
+
+
+
+#container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+   
+    bottom: 40%;
+    left: 45%;
+    
+}
+
+h1 {
+    color: #333;
+    opacity: 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+#happy {
+    animation: fallFromTop 4s ease-out forwards;
+    color: aqua;
+}
+
+#birthday {
+    animation: slideFromLeft 4s ease-out forwards;
+    color: pink;
+}
+
+#friend {
+    animation: slideFromRight 4s ease-out forwards;
+    color:chocolate
+}
+
+@keyframes fallFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#envelope {
+    position: relative;
+
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#flap {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 40px;
+    background-color: #ffffff;
+    border-top: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#letter {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 160px;
+    background-color: #ffffcc;
+    display: none;
+}
+
+#message {
+    position: absolute;
+    top: 10px;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 255, 170);
+    cursor: pointer;
+}
+
+#messageModal {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 9999;
+}
+
+#messageContent {
+    color: #fff;
+}
+
+#closeMessageButton {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#audio{
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.envelope-icon {
+    position: absolute;
+    top: 30px;
+    size: 40px;
+    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);/* Adjust margin as needed */
+    display: flex;
+    color: #ffffff;
+    
+}
+
+#surpriseBox {
+   
+   
+    position: absolute;
+    top: 75%;
+   left: 130px;
+    display: block; /* Initially hidden */
+}
+
+#qr{
+    position: absolute;
+    display: none;
+    top: 75%;
+    left: 130px;
+
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Position the button on the right side */
+.button {
+    position: fixed;
+    top: 75%;
+    right: 150px;
+    transform: translateY(-50%);
+}
+
+
+
